@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dpB-up-MJd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--RunningVC-->
+        <scene sceneID="XSv-nA-szd">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="dpB-up-MJd" customClass="RunningVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AvO-fH-S2N"/>
+                        <viewControllerLayoutGuide type="bottom" id="BRF-r7-fCc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BUo-FX-erv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeY-oK-hqb" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="414"/>
+                                <color key="backgroundColor" red="0.64020290516704448" green="0.48739781812366945" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DeY-oK-hqb" secondAttribute="height" multiplier="160:207" id="O7V-lu-C30"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEK-4l-ljM">
+                                <rect key="frame" x="145" y="503" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZEK-4l-ljM" secondAttribute="height" multiplier="1:1" id="YAE-8N-Llc"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pauseBtn:" destination="dpB-up-MJd" eventType="touchUpInside" id="llU-OA-S69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-VK-etJ">
+                                <rect key="frame" x="262" y="503" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fTb-VK-etJ" secondAttribute="height" multiplier="1:1" id="CvV-zk-vVm"/>
+                                </constraints>
+                                <state key="normal" title="停止"/>
+                                <connections>
+                                    <action selector="endBtn:" destination="dpB-up-MJd" eventType="touchUpInside" id="UAd-3X-c6d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-4W-K15">
+                                <rect key="frame" x="25" y="503" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pqf-4W-K15" secondAttribute="height" multiplier="1:1" id="4L8-SZ-PPJ"/>
+                                </constraints>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startBtn:" destination="dpB-up-MJd" eventType="touchUpInside" id="PUm-f3-BD3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DeY-oK-hqb" firstAttribute="top" secondItem="AvO-fH-S2N" secondAttribute="bottom" id="10l-3A-AS3"/>
+                            <constraint firstItem="pqf-4W-K15" firstAttribute="leading" secondItem="BUo-FX-erv" secondAttribute="leadingMargin" constant="9" id="57t-dB-yed"/>
+                            <constraint firstItem="fTb-VK-etJ" firstAttribute="leading" secondItem="ZEK-4l-ljM" secondAttribute="trailing" constant="87" id="AsG-0y-Mz2"/>
+                            <constraint firstItem="BRF-r7-fCc" firstAttribute="top" secondItem="pqf-4W-K15" secondAttribute="bottom" constant="35" id="Jco-Yq-Vgg"/>
+                            <constraint firstItem="DeY-oK-hqb" firstAttribute="leading" secondItem="BUo-FX-erv" secondAttribute="leading" id="OBN-Yt-VgS"/>
+                            <constraint firstItem="ZEK-4l-ljM" firstAttribute="top" secondItem="DeY-oK-hqb" secondAttribute="bottom" constant="69" id="TUT-wP-c7Z"/>
+                            <constraint firstItem="BRF-r7-fCc" firstAttribute="top" secondItem="ZEK-4l-ljM" secondAttribute="bottom" constant="35" id="Tbb-Ux-mIS"/>
+                            <constraint firstAttribute="trailing" secondItem="DeY-oK-hqb" secondAttribute="trailing" id="Xq3-Ef-65r"/>
+                            <constraint firstItem="pqf-4W-K15" firstAttribute="top" secondItem="DeY-oK-hqb" secondAttribute="bottom" constant="69" id="iRx-Z6-VcZ"/>
+                            <constraint firstItem="fTb-VK-etJ" firstAttribute="top" secondItem="DeY-oK-hqb" secondAttribute="bottom" constant="69" id="n33-54-MRV"/>
+                            <constraint firstItem="BRF-r7-fCc" firstAttribute="top" secondItem="fTb-VK-etJ" secondAttribute="bottom" constant="35" id="orX-2K-WqN"/>
+                            <constraint firstItem="ZEK-4l-ljM" firstAttribute="leading" secondItem="pqf-4W-K15" secondAttribute="trailing" constant="90" id="yZt-kS-bmg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Em-Za-KZ3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="DeY-oK-hqb" id="bMx-Tf-11M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLU-2K-fX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="274"/>
+        </scene>
+    </scenes>
+</document>
